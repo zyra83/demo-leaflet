@@ -1,0 +1,10 @@
+version: "3.3"
+services:
+  php-leaflet:
+    image: php:7.0-apache
+    # accessible sur http://127.0.0.1:8888, à remplacer par exemple par 80:80 si le port 80 est dispo
+    ports:
+      - 8888:80
+    # je monte src à la racine du serveur php
+    volumes:
+       - ./src:/var/www/html
